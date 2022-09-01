@@ -1,0 +1,166 @@
+
+ <link rel="stylesheet" href="/css/sdp.css" type="text/css"> 
+
+
+<script>
+
+
+
+
+// function validate_form ( )
+// {
+//   var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
+
+//   valid = true;
+
+//   if ( document.getElementById('Requirement1').value == "" )
+//         {
+//                 alert ( "Please fill in the 'First Name' box." );
+//                 valid = false;
+//         }
+
+//   if ( document.contactform.lastname.value == 0 )
+//         {
+//                 document.contactform.lastname.style.background= 'Yellow';
+//                 alert ( "Please fill in the 'Last Name' box." );
+//                 valid = false;
+//         }        
+
+//   if (document.contactform.email.value.match(illegalChars)) 
+//         {
+
+//                 document.contactform.email.style.background= 'Yellow';
+//                 alert ( "Illegal Characters" );
+//                 valid = false;
+//         }
+  
+//   if ( document.contactform.email.value == 0 )
+//         {
+//                 document.contactform.email.style.background= 'Yellow';
+//                 alert ( "Please fill in the 'Email' box." );
+//                 valid = false;
+//         }        
+
+//   if ( document.contactform.message.value == 0 )
+//         {
+//                 document.contactform.message.style.background= 'Yellow';
+//                 alert ( "Please fill in the 'Message' box." );
+//                 valid = false;
+//         }        
+      
+//   return valid;
+// }
+
+
+
+function yesnoCheck() {
+    yes = document.getElementById('Requirement3')
+
+    if (document.getElementById('yesCheck').checked) {
+        yes.type  = 'text';
+    } 
+    if (document.getElementById('noCheck').checked) {
+        yes.type  = 'hidden';
+     
+
+    } 
+ 
+}
+
+
+
+function yesnoCheck2() {
+    yes2 = document.getElementById('Requirement03')
+
+    if (document.getElementById('yesCheck2').checked) {
+        yes2.type  = 'text';
+    } 
+    if (document.getElementById('noCheck2').checked) {
+        yes2.type  = 'hidden';
+     
+
+    } 
+ 
+}
+  
+
+
+</script>
+
+
+<body>
+    <p>Amazon RDS Prerequisites </p>
+    <!-- <span>The following items will be validated by the AWS PMSA</span> -->
+    <!-- <hr> -->
+        <div id="card-container">
+            <form action="submit.html" onsubmit="return validate_form()">
+
+                <div class="card">
+            
+            
+           
+
+                    <div class="card-header">
+                        <h2>APN Program Requirements</h2>
+                    </div>
+                    <div class="card-body">   
+                        <form> 
+                                <label>What is services Path Membership the partner joind?</label><br>
+                                <input type="textbox" id="Requirement1" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);"  required="required" ><br>
+                                <span>- Partner must at the Validated or Differentiated stage within the Services Path</span><br>
+                                <p id="demo"></p>
+                        </form>
+                    </div>
+                  </div>
+                  <div class="card3">
+                    <div class="card-header">
+                        <h2>Amazon RDS Practice and Focus | AWS Partner Microsite</h2>
+                    </div>
+                    <div class="card-body">   
+                        <form> 
+                            <label>Does The partner have a Microsite?</label><br>
+                            <span>- AWS Partner must have an AWS-branded microsite that highlights their AWS practice</span><br>
+                            <span>- Microsite should include mention of their expertise with Amazon RDS</span><br><br>
+    
+    
+                            <input type="radio" class="Requirement2" name="opation1" value="Yes" onclick="yesnoCheck();" id="yesCheck"> 
+                            <label for="no">Yes</label>
+                            <input type='hidden' id='Requirement3' name='yes' placeholder='Enter Microsite URL:'/>
+                            <br><input type="radio" class="Requirement2" name="opation1" value="No" onclick="yesnoCheck();" id="noCheck"> 
+                            <label for="no">No</label><br>
+                          
+                    
+                            
+                          </form>
+                    </div>
+                  </div>
+            
+    
+    
+                  <div class="card4">
+                    <div class="card-header">
+                        <h2>AWS Partner Self-Assessment</h2>
+                    </div>
+                    <div class="card-body">           
+                        <form> 
+                            <label>Does the partner complate the Self-Assessment Spreadsheet for each case study?</label><br>
+                            <span>- All sections of the Self-Assessment Spreadsheet must be completed for each case study and spreadsheet must be attached to the associated application in AWS Partner Central.</span><br>
+                            <input type="radio" class="Requirement4" name="opation2" value="Yes" onclick="yesnoCheck2();" id="yesCheck2"> 
+                            <label for="no">Yes</label>
+                            <input type='hidden' id='Requirement03' name='yes2' placeholder='Self-Assessment URL:'/>
+                            <br><input type="radio" class="Requirement4" name="opation2" value="No" onclick="yesnoCheck2();" id="noCheck2"> 
+                            <label for="no">No</label><br>
+                          </form>
+                  </div>
+            
+
+            </form>
+
+         
+          </div>
+
+
+</body>
+
+
+
